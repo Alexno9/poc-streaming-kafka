@@ -10,7 +10,7 @@ from faker import Faker
 # -------------------------------------------------------------------------------------------------------------------- #
 
 # Inicializar o Faker
-Faker.seed(123456)
+#Faker.seed(123456) Rodar o faker no modo aleatório
 fake = Faker(['pt_BR'])
 
 # Quantidade para inserir: 200 mil
