@@ -121,15 +121,22 @@ $ {
    }
  }
 ```
+Vinculamos está lib em conjunto com um código em python que faz a função de producer para o kafka (faker-gen.py). 
+- Para a simulação do scrapping, são gerados 1000 objetos JSON a cada 0.1 segundo;
+- A cada 0.1 segundo, o producer executa um flush e realiza o processo de geração novamente
+- O teto de geração foi setado para 200.000 objetos JSON
 
-Second Tab:
+bibliotecas utilizadas no producer:
 ```sh
-$ gulp watch
+import datatime, json, time
+from confluent_kafka import Producer
+from faker import Faker
 ```
 
-(optional) Third:
+Parametros do producer:
 ```sh
-$ karma test
+p = Producer({'bootstrap.servers': 'host:porta do broker kafka'})
+p.produce()
 ```
 #### Building for source
 For production release:
