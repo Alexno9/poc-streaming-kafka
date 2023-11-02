@@ -1,4 +1,4 @@
-# BigBoss Streaming
+# Project Streaming
 
 A proposta deste projeto é simular os dados gerados de um web scrapping em anúncios imobiliários de diversos sites. O foco é construir uma arquitetura que seja capaz de realizar a ingestão/carga destes dados de maneira eficiente e conscistente.
 
